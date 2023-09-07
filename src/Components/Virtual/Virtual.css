@@ -1,0 +1,21 @@
+.games-main {
+  background-image: url(../../Assets/Images/background.jpg);
+  height: 100vh;
+
+  padding: 5rem;
+}
+
+.games-card {
+  background: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 70%;
+  margin-left: 10rem;
+
+  cursor: pointer;
+}
+.card-img-top {
+  margin-bottom: 15px;
+  width: 100%;
+}

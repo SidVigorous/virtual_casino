@@ -1,0 +1,55 @@
+.main-logo {
+  width: 10rem;
+  margin-left: 1rem;
+  margin-right: 1.5rem;
+}
+.search-here {
+    outline: none;
+    border: none;
+  width: 20rem;
+  height: 1.5rem;
+  border-radius: 5px;
+}
+.left-nav {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.deposit-img {
+  width: 1rem;
+}
+.withdrawal-img {
+  width: 1rem;
+}
+.deposit-btn {
+  background: red;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  height: 1.5rem;
+}
+.withdrawal-btn {
+  background: green;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  margin-left: 5px;
+  height: 1.5rem;
+}
+.bal-exp{
+background: #243a48;
+padding: 5px;
+border-radius: 5px;
+margin-left: 46rem;
+}
+.bal-exp>span{
+  color: white;
+  font-size: 12px;
+
+}
