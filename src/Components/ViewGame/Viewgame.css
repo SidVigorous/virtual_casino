@@ -2,9 +2,13 @@
   background-image: url(../../Assets/Images/background.jpg);
   height: auto;
   display: flex;
+  align-items: center;
 }
 .slider {
   width: 23.33%;
+}
+.marquee-container {
+  overflow: hidden !important;
 }
 .menu__logos-wrapper {
   background-image: url(../../Assets/Images/background.webp);
@@ -40,7 +44,7 @@
 }
 .middile-part {
   width: 53.33%;
-  margin-left: 3rem;
+  margin-left: 4rem;
   margin-right: 33rem;
   margin-top: 66px;
 }
@@ -101,7 +105,7 @@
 }
 table {
   margin-top: 2rem;
-  width: 73%;
+  width: 85%;
 }
 
 th:nth-child(1) {
@@ -271,6 +275,10 @@ th {
   background-color: white;
 }
 
+.accordion-button:focus {
+  box-shadow: none;
+}
+
 .btn-profit-loss {
   width: 20rem;
   height: 40px;
@@ -331,4 +339,8 @@ th {
   color: white;
   width: 20rem;
   background-color: #264e47;
+}
+
+.modal-body {
+  text-align: center;
 }

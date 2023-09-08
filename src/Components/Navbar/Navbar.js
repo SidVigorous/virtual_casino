@@ -17,7 +17,6 @@ const Navbar = () => {
         <input type="search" className="search-here" />
         <AiOutlineSearch />
         <button className="deposit-btn">
-          {" "}
           <img src={depositicon} alt="" className="deposit-img" />
           DEPOSIT
         </button>
