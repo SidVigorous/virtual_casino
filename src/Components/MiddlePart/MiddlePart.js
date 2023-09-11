@@ -60,7 +60,7 @@ const MiddlePart = () => {
                     <span>2</span>
                     <span>15000</span>
                   </td>
-                  <td></td>
+                  <td ></td>
                   <td></td>
                   <td></td>
                   <td></td>

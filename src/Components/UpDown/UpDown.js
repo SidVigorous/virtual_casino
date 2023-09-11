@@ -1,6 +1,5 @@
 import React from "react";
 import "./UpDown.css";
-
 import LeftBar from "../LeftBar/LeftBar";
 import MiddlePart from "../MiddlePart/MiddlePart";
 import RightBar from "../RightBar/RightBar";
@@ -10,18 +9,18 @@ const Viewgame = () => {
       <div
         style={{
           display: "flex",
-          justifyContent: "space-around",
-          width: "85%",
+          justifyContent: "center",
+          gap: "37px",
         }}
       >
-        <div style={{ width: "25%" }}>
+        <div>
           <LeftBar />
         </div>
-        <div style={{ width: "50%", marginLeft: "5rem" }}>
+        <div>
           <MiddlePart />
         </div>
 
-        <div style={{ width: "25%" }}>
+        <div>
           <RightBar />
         </div>
       </div>

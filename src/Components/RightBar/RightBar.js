@@ -1,15 +1,19 @@
 import React from "react";
-import "./RightBar.css"
+import "./RightBar.css";
 import { Modal, ModalBody, ModalHeader } from "reactstrap";
 import Accordion from "react-bootstrap/Accordion";
 import { useState } from "react";
+
 const RightBar = () => {
   const [modal, setModal] = useState(false);
   const [profitModal, setProfitModal] = useState(false);
+  const [betinfo, setBetInfo] = useState(false);
+  const [editstake, setEditStake] = useState(false);
+
   return (
     <div className="right-part">
       <Accordion defaultActiveKey={["0"]} className="total-credit">
-        <Accordion.Item eventKey="0">
+        <Accordion.Item eventKey="1">
           <Accordion.Header>Available Credit: 0.00</Accordion.Header>
           <Accordion.Body>Total Net Exposure: 0.00</Accordion.Body>
         </Accordion.Item>
@@ -73,16 +77,81 @@ const RightBar = () => {
       <hr style={{ width: "20rem" }} />
       <div className="bet-edit">
         <div style={{ display: "flex" }}>
-          <button className="btn-1">Betslip</button>
-          <button className="btn-2">Open Bets</button>
+          <button className="btn-1" onClick={() => setBetInfo(false)}>
+            Betslip
+          </button>
+          <button className="btn-2" onClick={() => setBetInfo(true)}>
+            Open Bets
+          </button>
         </div>
         <div>
-          <button className="stake-btn">Edit Stakes</button>
+          <button className="stake-btn" onClick={() => setEditStake(true)}>
+            Edit Stakes
+          </button>
         </div>
       </div>
-      <div className="add-section">
-        Click on the odds to add selections to the betslip.
-      </div>
+      {editstake && (
+        <div
+          style={{
+            backgroundColor: "#3d3d3e",
+            width: "325px",
+            padding: "10px",
+          }}
+        >
+          <div style={{ background: "white", height: "180px" }}>
+            <div className="editstake-popup">
+              <input style={{ width: "75px" }} />
+              <input style={{ width: "75px" }} />
+              <input style={{ width: "75px" }} />
+              <input style={{ width: "75px" }} />
+              <input style={{ width: "75px" }} />
+              <input style={{ width: "75px" }} />
+            </div>
+            <div className="cancel-save-btn">
+              <button
+                className="cancel-btn"
+                onClick={() => setEditStake(false)}
+              >
+                Cancel
+              </button>
+              <button className="save-btn" onClick={() => setEditStake(false)}>
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {betinfo ? (
+        <div>
+          <div className="betinformation">
+            <input type="checkbox" id="betinfo" />
+            <label style={{ fontSize: "12px" }}> Show bet Info</label>
+            <input type="checkbox" id="betinfo" />
+            <label style={{ fontSize: "12px" }}>Show bets for this event</label>
+          </div>
+          <div className="matched-bet">
+            <Accordion defaultActiveKey="0">
+              <Accordion.Item eventKey="1">
+                <Accordion.Header style={{ textAlign: "center" }}>
+                  Matched Bets
+                </Accordion.Header>
+                <Accordion.Body className="betinformation">
+                  <input type="checkbox" />
+                  <label style={{ fontSize: "12px" }}>Average Odds</label>
+                  <input type="checkbox" />
+                  <label style={{ fontSize: "12px" }}>Order By Date</label>
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
+          </div>
+        </div>
+      ) : (
+        <div className="add-section">
+          Click on the odds to add selections to the betslip.
+        </div>
+      )}
+
       <button className="game-rule" onClick={() => setModal(true)}>
         Game Rules
       </button>

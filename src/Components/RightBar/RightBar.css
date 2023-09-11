@@ -84,3 +84,42 @@
 .modal-body {
   text-align: center;
 }
+
+.betinformation {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 320px;
+  background: white;
+}
+.matched-bet {
+  padding-top: 10px;
+  width: 322px;
+  background: white;
+}
+
+.editstake-popup {
+  padding: 27px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.cancel-save-btn {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+
+.save-btn {
+  width: 55px;
+  background: rgb(92, 153, 111);
+  border: none;
+  border-radius: 2px;
+  color: white;
+  height: 32px;
+  font-size: 14px;
+}
+.cancel-btn {
+  background: white;
+  border: none;
+}
