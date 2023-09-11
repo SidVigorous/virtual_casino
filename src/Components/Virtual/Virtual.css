@@ -1,7 +1,6 @@
 .games-main {
   background-image: url(../../Assets/Images/background.jpg);
   height: auto;
-
   padding: 5rem;
   display: flex;
   gap: 50px;
