@@ -3,26 +3,20 @@
   height: auto;
 
   padding: 5rem;
+  display: flex;
+  gap: 50px;
 }
 
 .games-card {
-  /* background: none;
+  background: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 70%;
-  margin-left: 10rem;
-
-  cursor: pointer; */
-  display: grid;
-  justify-content: center;
-  grid-template-columns: 0fr 0fr 0fr;
-  grid-auto-rows: auto;
-  -moz-column-gap: 30px;
-  column-gap: 30px;
-  row-gap: 30px;
+  margin-left: 3rem;
+  gap: 10px;
+  cursor: pointer;
 }
 .card-img-top {
-
   width: 100%;
 }

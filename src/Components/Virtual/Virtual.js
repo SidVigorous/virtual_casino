@@ -15,8 +15,8 @@ import t20 from "../../Assets/Images/Teenpatti T20 (Virtual).webp";
 import meter from "../../Assets/Images/Casino Meter (Virtual).webp";
 import andar from "../../Assets/Images/Andar Bahar (Virtual).webp";
 import up from "../../Assets/Images/7 up & Down (Virtual).webp";
-
 import { Link } from "react-router-dom";
+import RightBar from "../RightBar/RightBar";
 
 const Virtual = () => {
   return (
@@ -85,7 +85,10 @@ const Virtual = () => {
         <Card style={{ width: "14rem", border: "none" }}>
           <Card.Img variant="top" src={trio} />
         </Card>
-      </div>{" "}
+      </div>
+      <div>
+        <RightBar />
+      </div>
     </div>
   );
 };

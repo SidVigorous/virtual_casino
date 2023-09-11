@@ -9,14 +9,24 @@ import diamonds from "../../Assets/Images/diamonds.png";
 import heart from "../../Assets/Images/Hearts.webp";
 import amar from "../../Assets/Images/Amar-Akbar-Anthony-_Virtual_.png";
 import { Switch } from "antd";
+import Modal from "react-bootstrap/Modal";
+
+import cup from "../../Assets/Images/cup.png";
+import s5 from "../../Assets/Images/S5.webp";
+
 const MiddlePart = () => {
   const [visible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
     setIsVisible(!visible);
   };
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
-    <div className="middile-part">
+    <div className="middle-part">
       <button className="live-btn">Live(31)</button>
       <button className="virtual-btn">Virtual(21)</button>
       <div>
@@ -42,6 +52,7 @@ const MiddlePart = () => {
             <span className="display-result">D3</span>
             <span className="display-result">C9</span>
           </div>
+
           <div>
             <table>
               <tbody>
@@ -60,7 +71,7 @@ const MiddlePart = () => {
                     <span>2</span>
                     <span>15000</span>
                   </td>
-                  <td ></td>
+                  <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -174,34 +185,64 @@ const MiddlePart = () => {
         <>
           <div>
             <div className="classic-right">
-              <div className="diamond">
+              <div className="diamond" onClick={handleShow}>
                 <img src={diamond} alt="" />6
               </div>
-              <div className="diamond">
+              <div className="diamond" onClick={handleShow}>
                 <img src={diamond} alt="" />j
               </div>
-              <div className="diamond">
+              <div className="diamond" onClick={handleShow}>
                 <img src={diamond} alt="" />k
               </div>
-              <div className="diamond">
+              <div className="diamond" onClick={handleShow}>
                 <img src={diamond} alt="" />l
               </div>
-              <div className="diamond">
+              <div className="diamond" onClick={handleShow}>
                 <img src={diamond} alt="" />9
               </div>
-              <div className="diamond">
+              <div className="diamond" onClick={handleShow}>
                 <img src={diamond} alt="" />q
               </div>
-              <div className="diamond">
+              <div className="diamond" onClick={handleShow}>
                 <img src={diamond} alt="" />9
               </div>
-              <div className="diamond">
+              <div className="diamond" onClick={handleShow}>
                 <img src={diamond} alt="" />A
               </div>
-              <div className="diamond">
+              <div className="diamond" onClick={handleShow}>
                 <img src={diamond} alt="" />A
               </div>
             </div>
+          </div>
+          <div>
+            <Modal show={show} onHide={handleClose} centered>
+              <Modal.Header closeButton>
+                <Modal.Title>7 Up & Down Virtual</Modal.Title>
+              </Modal.Header>
+              <div style={{ marginLeft: "1rem" }}>ROUND ID: 52578835</div>
+              <Modal.Body
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  gap: "1rem",
+                }}
+              >
+                <img
+                  src={cup}
+                  alt=""
+                  style={{ width: "44px", height: "44px" }}
+                />
+                <img
+                  src={s5}
+                  alt=""
+                  style={{
+                    width: "32px",
+                    height: "44px",
+                    border: "1px solid black",
+                  }}
+                />
+              </Modal.Body>
+            </Modal>
           </div>
           <div className="up-down">7 UP & DOWN VIRTUAL</div>
           <div>#52290422</div>

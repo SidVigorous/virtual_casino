@@ -5,6 +5,7 @@ import App from "./App";
 import UpDown from "./Components/UpDown/UpDown"
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Virtual from "./Components/Virtual/Virtual";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,11 @@ const router = createBrowserRouter([
     path: "/casino-details",
     element: <UpDown/>,
   },
+
+  {
+    path:"/Lobby",
+    element:<Virtual/>
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
