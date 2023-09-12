@@ -16,7 +16,6 @@ import s5 from "../../Assets/Images/S5.webp";
 
 const MiddlePart = () => {
   const [visible, setIsVisible] = useState(false);
-
   const toggleVisibility = () => {
     setIsVisible(!visible);
   };

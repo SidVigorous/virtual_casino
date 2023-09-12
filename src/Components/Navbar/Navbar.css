@@ -32,3 +32,133 @@
   color: white;
   font-size: 12px;
 }
+
+.navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #5f7fdb 0, #0cddff 100%);
+  margin-top: 1px;
+}
+
+@keyframes glowing {
+  0% {
+    transform: scale(1, 1);
+    background: yellow;
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+    background: darkred;
+    color: #fff;
+    box-shadow: inset 0px 2px 4px 0px #1b00ff;
+  }
+  100% {
+    transform: scale(1, 1);
+    background: blue;
+  }
+}
+
+@keyframes glow {
+  0% {
+    background: white;
+    color: red;
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+    background: darkred;
+    color: #fff;
+    box-shadow: inset 0px 2px 4px 0px #1b00ff;
+  }
+  100% {
+    background: yellow;
+    color: black;
+  }
+}
+.navigation-btn:hover,
+.nav-btn-casino:hover,
+.nav-btn-new:hover,
+.nav-setting:hover {
+  text-decoration: underline;
+}
+.navigation-btn {
+  border: none;
+  background: linear-gradient(180deg, #5f7fdb 0, #0cddff 100%);
+  color: #000;
+  font-size: 12px;
+  padding: 4px 10px;
+  display: inline-block;
+  border-right: 1px solid rgba(69, 32, 7, 0.2);
+  list-style: none;
+  text-transform: capitalize;
+  font-weight: 700;
+  position: relative;
+}
+
+.nav-btn-casino {
+  border: none;
+  color: #000;
+  font-size: 12px;
+  padding: 4px 10px;
+  display: inline-block;
+  border-right: 1px solid rgba(69, 32, 7, 0.2);
+  list-style: none;
+  text-transform: capitalize;
+  font-weight: 700;
+  animation: glowing 1300ms infinite;
+}
+.nav-btn-new {
+  border: none;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 4px 10px;
+  display: inline-block;
+  border-right: 1px solid rgba(69, 32, 7, 0.2);
+  list-style: none;
+  text-transform: capitalize;
+  font-weight: 700;
+  position: relative;
+}
+.nav-btn-new > em,
+.navigation-btn > em {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: normal;
+  font-style: normal;
+  font-size: 7px;
+  padding: 1px 4px;
+  border-radius: 1px;
+  font-weight: 900;
+  text-transform: uppercase;
+  animation: glow 2s ease-out infinite;
+}
+.nav-setting {
+  display: flex;
+  align-items: center;
+  gap: "2px";
+  color: #000;
+  font-size: 12px;
+  padding: 4px 10px;
+  display: inline-block;
+  border-right: 1px solid rgba(69, 32, 7, 0.2);
+  list-style: none;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.last-navbar {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  margin-top: 2px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
